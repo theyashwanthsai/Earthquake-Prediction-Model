@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Earthquake Evacuation </title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Earthquake Evacuation </h1>
+    </header>
+
+    <h1>Predicted magnitude of cities more prone to earthquake</h1>
+    <table class = "prediction">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Srinagar </td>
+          <td>{{ result1 }}</td>
+        </tr>
+        <tr>
+          <td>Guwahati</td>
+          <td>{{ result3 }}</td>
+        </tr>
+        <tr>
+          <td>Kathmandu</td>
+          <td>{{ result4 }}</td>
+        </tr>
+        <tr>
+          <td>Mumbai</td>
+          <td>{{ result5 }}</td>
+        </tr>
+        <tr>
+          <td>Chennai</td>
+          <td>{{ result6 }}</td>
+        </tr>
+        <tr>
+          <td>Thiruvananthapuram</td>
+          <td>{{ result7 }}</td>
+        </tr>
+        <tr>
+          <td>Kochi</td>
+          <td>{{ result8 }}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+   
+  <div class = "forms">
+    <form action = "/predict" method = "POST">
+    <h3> Enter the Longitude and Latitude: </h3><br>
+    <label for="lat">Latitude:     </label>
+    <input type="text" id="lat" name="lat"><br>
+    <br>
+    <br>
+    <label for="long">Longitude:    </label>
+    <input type="text" id="long" name="long" ><br>
+
+    <input type="submit" value="predict">
+
+    <h4>The magnitude predicted: {{ magnitude }}</h4>
+  </form>
+</div>
+
+  
+
+    <footer>
+      <p>&copy; 2023 Earthquake Evacuation Website</p>
+    </footer>
+  </body>
+</html>
